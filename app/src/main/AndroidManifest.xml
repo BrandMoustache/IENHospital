@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="mainbrain.tech.ienhospital">
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".Application.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="ManifestResource">
+        <activity
+            android:name=".Activities.LandingPage"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.PatientDetailsActivity"
+            android:screenOrientation="landscape" />
+        <!--<activity-->
+            <!--android:name=".Activities.RequestAmbulanceActivity"-->
+            <!--android:screenOrientation="landscape" />-->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".Activities.RequestAmbulanceDetailActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activities.ContactAmbulanceActivity"
+                  android:screenOrientation="landscape">
+
+        </activity>
+        <activity android:name=".Activities.HomeActivity"
+            android:screenOrientation="landscape"
+            />
+        <activity android:name=".Activities.Login"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activities.Verification"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activities.CheckOTP"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activities.ServiceRequest"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activities.RejectionReasons"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activities.OtherReason"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activities.RequestAmbulanceActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="landscape"/>
+        <!--<activity android:name=".track.SelectHospital"/>-->
+        <!--<activity android:name=".track.StateOfEmergency"/>-->
+        <!--<activity android:name=".track.WayToHospital"/>-->
+        <!--<activity android:name=".track.Track"/>-->
+
+        <service android:name=".Services.MySmackService"/>
+
+        <receiver android:name=".BroadcastReceivers.SmsReceiver" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+
+        </receiver>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <service
+            android:name=".Services.FetchAddressIntentService"
+            android:exported="false"/>
+    </application>
+
+</manifest>

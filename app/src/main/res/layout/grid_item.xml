@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="0.01dp">
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightBlue">
+
+            <LinearLayout
+                android:id="@+id/ll_patientname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_thumbnail"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/circle"
+                    app:civ_border_color="#f46d7e"
+                    app:civ_border_width="5dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_species"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Patient Name"
+                        android:textColor="@color/colorPrimaryText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Feb 10, 2016"
+                        android:textColor="@color/colorSecondaryText" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

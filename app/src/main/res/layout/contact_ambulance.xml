@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_mainlayout"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:backgroundTint="@color/colorWhite"
+            android:layout_margin="@dimen/fab_margin"
+            app:fabSize="normal"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:tint="@color/colorPrimaryText"
+            app:srcCompat="@drawable/ic_close_black_36dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <fragment
+                    android:id="@+id/location_map"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/ll_requestambulancedetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:layout_alignParentBottom="true"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#eeeded">
+
+                    <!--<ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">-->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/ic_person_black_36dp" />
+
+                            <TextView
+                                android:id="@+id/txtv_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/rounded_edittext_color"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:paddingLeft="5dp"
+                                android:text="Name"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_location_on_black_36dp" />
+
+                            <TextView
+                                android:id="@+id/txtv_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/rounded_edittext_color"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:text="Address"
+                                android:paddingLeft="5dp"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_gravity="center"
+                                />
+
+                            <TextView
+                                android:id="@+id/txtv_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/rounded_edittext_color"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:paddingLeft="5dp"
+                                android:text="Phone number"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/ic_access_time_white_36dp" />
+                            <TextView
+                                android:id="@+id/txtv_reqambulancetime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorPrimaryText"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Wed,9.30 AM"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--</ScrollView>-->
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#b0e0e6"
+                    android:orientation="vertical">
+
+                        <Button
+                        android:id="@+id/btn_contactambulance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_button_blue"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Contact Ambulance"
+                        android:textColor="@color/colorWhite"
+                        android:visibility="visible"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="20dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#212121"
+                            android:text="Ambulance Details" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/img_thumbnail"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_species"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#212121"
+                                    android:text="Driver Name" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="#808080"
+                                    android:text="Vehicle Number(TN 09 AD 4567)" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/fab_margin"
+            android:tint="@color/colorWhite"
+            app:srcCompat="@drawable/ic_call_black_36dp" />
+    </RelativeLayout>
+
+</LinearLayout>
