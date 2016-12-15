@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import mainbrain.tech.ienhospital.Activities.PatientDetailsActivity;
+import mainbrain.tech.ienhospital.Activities.RequestAmbulanceDetailActivity;
 import mainbrain.tech.ienhospital.Helper.Sansation;
 import mainbrain.tech.ienhospital.Interfaces.ItemClickListener;
 import mainbrain.tech.ienhospital.R;
@@ -56,10 +57,8 @@ public class TopRecycleAdaptar extends RecyclerView.Adapter<TopRecycleAdaptar.Vi
                     context.startActivity(new Intent(context, PatientDetailsActivity.class));
                 } else {
                     // Toast.makeText(context, "#" + position + " - " + alName.get(position), Toast.LENGTH_SHORT).show();
-                    Intent patientdetail=new Intent(context,PatientDetailsActivity.class);
-                    context.startActivities(new Intent[]{patientdetail});
-
-
+                    Intent patientdetail=new Intent(context,RequestAmbulanceDetailActivity.class);
+                    context.startActivity(patientdetail);
                 }
             }
         });
