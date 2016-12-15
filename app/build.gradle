@@ -49,7 +49,6 @@ dependencies {
     compile files('libs/smack-sasl-provided-4.1.8.jar')
     compile files('libs/smack-tcp-4.1.8.jar')
     compile files('libs/smack-debug-slf4j-4.1.8.jar')
-
     compile 'com.google.android.gms:play-services-location:9.4.0'
     compile 'com.google.android.gms:play-services-maps:9.4.0'
     compile 'com.google.android.gms:play-services-places:9.4.0'
