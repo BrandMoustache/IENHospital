@@ -53,7 +53,8 @@ public class CheckOTP extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.checkotp);
-        
+
+
         new Sansation().overrideFonts(getApplicationContext() , findViewById(R.id.layout));
         txtv1=(TextView)findViewById(R.id.txtv_line1);
         txtv2=(TextView)findViewById(R.id.txtv_line2);
