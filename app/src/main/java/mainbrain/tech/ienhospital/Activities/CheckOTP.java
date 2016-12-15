@@ -151,7 +151,6 @@ public class CheckOTP extends Activity
                     txtv4.setVisibility(View.GONE);
                     ll_id.setVisibility(View.GONE);
                     txtv5.setVisibility(View.GONE);
-
                 }
                 else if(edttxt_otp.length()==0)
                 {

@@ -40,14 +40,12 @@ public class RejectionReasons extends AppCompatActivity
 {
     private ArrayAdapter<String> arrayAdapter;
     private ListView listView;
-
     private  int selected = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rejectreasons);
-
         listView = (ListView) findViewById(R.id.listView);
 
         new Sansation().overrideFonts(getApplicationContext() , findViewById(R.id.layout));
@@ -75,7 +73,6 @@ public class RejectionReasons extends AppCompatActivity
                 return view;
             }
         };
-
         arrayAdapter.add("Reason 1");
         arrayAdapter.add("Reason 2");
         arrayAdapter.add("Reason 3");

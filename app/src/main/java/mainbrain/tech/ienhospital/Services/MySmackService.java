@@ -94,7 +94,6 @@ public class MySmackService extends Service implements StanzaListener, MessageLi
                 .build();
 
         connection=new XMPPTCPConnection(config);
-
         connection.addAsyncStanzaListener(this, MessageTypeFilter.NORMAL_OR_CHAT_OR_HEADLINE);
 
         //connection.setUseStreamManagement(true);
@@ -223,10 +222,12 @@ public class MySmackService extends Service implements StanzaListener, MessageLi
         message.setBody(content);
         try
         {
-            connection.sendStanza(message);
+         connection.sendStanza(message);
         }
         catch(Exception e)
         {
+
+           e.printStackTrace();
 
         }
     }
@@ -242,7 +243,7 @@ public class MySmackService extends Service implements StanzaListener, MessageLi
         }
         catch(Exception e)
         {
-
+            e.printStackTrace();
         }
     }
 
@@ -257,7 +258,7 @@ public class MySmackService extends Service implements StanzaListener, MessageLi
         }
         catch(Exception e)
         {
-
+         e.printStackTrace();
         }
     }
 
@@ -272,7 +273,7 @@ public class MySmackService extends Service implements StanzaListener, MessageLi
         }
         catch(Exception e)
         {
-
+        e.printStackTrace();
         }
     }
 
@@ -663,7 +664,7 @@ public class MySmackService extends Service implements StanzaListener, MessageLi
         }
         catch(Exception e)
         {
-            Log.e("smackError" , e.toString());
+         Log.e("smackError" , e.toString());
         }
     }
 
